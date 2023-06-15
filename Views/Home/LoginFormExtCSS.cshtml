@@ -1,0 +1,42 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login Form</title>
+    <link href="~/Content/CSS/LoginFormStyle.css" rel="stylesheet" />
+</head>
+<body class="main-body-style">
+    <div class="main-container-style">
+        <!--Form Heading-->
+        <div class="header-style">
+            <h2>USER LOGIN</h2>
+        </div>
+        <!--Form Elements-->
+        <form class="form-style" name="form1" id="form">
+            <!--Username-->
+            <div class="formelement">
+                <label>Username</label>
+                <input type="text" name="username" id="username" />
+            </div>
+            <!--Password-->
+            <div class="formelement">
+                <label>Password</label>
+                <input type="password" name="password" id="password" />
+            </div>
+            <!--Buttons-->
+            <div class="formelement">
+                <!--<input type="button" name="Login" id="button" onclick="Checkvalidation()" />-->
+                <button id="button">LOGIN</button>
+            </div>
+            <div class="link-style">
+                <a href="#" style="text-decoration: none; cursor: pointer; color: black">Forgot Password?</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

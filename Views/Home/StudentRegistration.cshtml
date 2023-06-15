@@ -1,0 +1,220 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <!--Title of the web page-->
+    <title>Student Registration Form</title>
+    <!--Internal styles-->
+    <style>
+        .main-body-style {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0px;
+        }
+        .form-container-style {
+            background-color: #99b9f2;
+            border-radius: 5px;
+            max-width: 100%;
+            width: 800px;
+            padding-left: 70px;
+        }
+            .form-container-style .main-form-style {
+                padding: 10px 30px 10px 30px;
+            }
+        .main-form-style .photo-container {
+            display: flex;
+            align-items: center;
+        }
+        .main-form-style .photo-border {
+            display: inline-block;
+            border-radius: 5px;
+            border: 1px solid green;
+            padding: 0px 0px 50px 0px;
+        }
+            .main-form-style .photo-border #photo {
+                height: 48px;
+                width: 86px;
+            }
+        .main-form-style .form-element-style label {
+            display: inline-block;
+            width: 120px;
+            text-align: Left;
+            margin-right: 10px;
+        }
+        .main-form-style .form-element-style input, select {
+            display: inline-block;
+            width: 500px;
+            box-sizing: border-box;
+            padding: 1px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin-bottom: 10px;
+        }
+        .main-form-style .horizontal-line-style {
+            display: inline-block;
+            width: 650px;
+        }
+        .main-form-style .form-button-style input {
+            border-radius: 5px;
+            padding: 4px 8px 4px 8px;
+            border: 1px solid blue;
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<!--Body of the Web page-->
+<body class="main-body-style">
+    <div class="form-container-style">
+        <!--Registration form-->
+        <form class="registrationForm" name="registrationForm" id="registrationForm">
+            <div class="main-form-style">
+                <!--Heading of the page-->
+                <div>
+                    <h2 style="text-align: center">XYZ College/School</h2>
+                    <h3 style="text-align: center">Student Registration Form</h3>
+                </div>
+                <!--Upload Photo-->
+                <div class="photo-container">
+                    <label for="photo" style="display: inline-block; width: 150px; text-align: Left;
+                                margin-right: 10px;">Select Image:</label>
+                    <div class="photo-border">
+                        <input type="file" id="photo" name="Choose file">
+                    </div>
+                    <label for="photo" style="display: inline-block; width: 150px; text-align: Left">
+                        (less than 5 Mb)
+                    </label>
+                </div>
+                <!--Student name-->
+                <div class="form-element-style">
+                    <label for="studentName">Student name:</label>
+                    <input type="text" id="studentName" name="studentName" required>
+                </div>
+                <!--Father's name-->
+                <div class="form-element-style">
+                    <label for="fatherName">Father's name:</label>
+                    <input type="text" id="fatherName" name="fatherName" required>
+                </div>
+                <!--Mother's name-->
+                <div class="form-element-style">
+                    <label for="motherName">Mother's name:</label>
+                    <input type="text" id="motherName" name="motherName" required>
+                </div>
+                <!--Gender-->
+                <div>
+                    <label style="display: inline-block; width: 150px; text-align: Left; margin-right: 10px;"
+                           for="gender">Gender:</label>
+                    <label for="male">Male</label>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="female">Female</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="others">Others</label>
+                    <input type="radio" id="others" name="others" value="others">
+                </div>
+                <!--Date of birth-->
+                <div class="form-element-style">
+                    <label for="dateOfBirth">Date of birth:</label>
+                    <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                </div>
+                <!--E-Mail-->
+                <div class="form-element-style">
+                    <label for="email">E-Mail:</label>
+                    <input type="text" id="email" name="email" required>
+                </div>
+                <!--Qualification level-->
+                <div class="form-element-style">
+                    <label for="level">Level:</label>
+                    <select id="level" name="level">
+                        <option value="postGraduate">Post graduate</option>
+                        <option value="underGraduate">Under graduate</option>
+                        <option value="highSchool">High school</option>
+                    </select>
+                </div>
+                <!--Department-->
+                <div class="form-element-style">
+                    <label for="department">Department:</label>
+                    <select id="department" name="department">
+                        <option value="Mechanical">Mechanical Engineering</option>
+                        <option value="Electrical">Electrical Engineering</option>
+                        <option value="Electronics">Electronics Engineering</option>
+                        <option value="Computer">Computer Engineering</option>
+                    </select>
+                </div>
+                <!--Mobile number-->
+                <div class="form-element-style">
+                    <label for="mobileNumber">Tel/Mobile:</label>
+                    <input type="number" id="mobileNumber" name="mobileNumber" required>
+                </div>
+                <hr class="horizontal-line-style" />
+                <!--Permananent address section-->
+                <div>
+                    <h3 style="text-align: center">Permanent Address</h3>
+                </div>
+                <!--State-->
+                <div class="form-element-style">
+                    <label for="state">State:</label>
+                    <input type="text" id="state" name="state" required>
+                </div>
+                <!--City-->
+                <div class="form-element-style">
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <!--Zip Code-->
+                <div class="form-element-style">
+                    <label for="zipCode">Zip Code:</label>
+                    <input type="number" id="zipCode" name="zipCode" required>
+                </div>
+                <!--Telephone or Mobile number-->
+                <div class="form-element-style">
+                    <label for="mobileNumber">Tel/Mobile:</label>
+                    <input type="number" id="mobileNumber" name="mobileNumber" required>
+                </div>
+                <hr class="horizontal-line-style" />
+                <!--Department-->
+                <div class="form-element-style">
+                    <h3 style="text-align: center">Temporary Address</h3>
+                </div>
+                <!--Temporary address section-->
+                <div>
+                    <label for="permanentAddress" style="display: inline-block; width: 250px;
+                            text-align: Left; margin-left: 10px;">Same as Permanent address:</label>
+                    <input type="checkbox" value="permanentAddress" id="permanentAddress">
+                </div>
+                <!--State-->
+                <div class="form-element-style">
+                    <label for="state">State:</label>
+                    <input type="text" id="state" name="state" required>
+                </div>
+                <!--City-->
+                <div class="form-element-style">
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <!--Zip Code-->
+                <div class="form-element-style">
+                    <label for="zipCode">Zip Code:</label>
+                    <input type="number" id="zipCode" name="zipCode" required>
+                </div>
+                <!--Telephone or Mobile number-->
+                <div class="form-element-style">
+                    <label for="mobileNumber">Tel/Mobile:</label>
+                    <input type="number" id="mobileNumber" name="mobileNumber" required>
+                </div>
+                <!--Register button-->
+                <div class="form-button-style">
+                    <input type="submit" value="Register">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

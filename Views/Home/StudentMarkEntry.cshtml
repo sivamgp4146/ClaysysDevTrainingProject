@@ -1,0 +1,208 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Student Mark Entry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        h1 {
+            text-align: Left;
+            color: #333333;
+        }
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            padding:20px;
+        }
+            table th,
+            table td {
+                padding: 6px;
+                border: 1px solid #cccccc;
+            }
+        .form-group {
+            margin-bottom: 20px;
+        }
+            .form-group label {
+                display: block;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+            .form-group input,
+            .form-group select {
+                width: 10%;
+                padding: 6px;
+                border: 1px solid #cccccc;
+                border-radius: 3px;
+                font-size: 16px;
+            }
+                .form-group input[type="submit"] {
+                    background-color: #333333;
+                    color: #ffffff;
+                    cursor: pointer;
+                }
+                    .form-group input[type="submit"]:hover {
+                        background-color: #555555;
+                    }
+    </style>
+</head>
+<body>
+    <h1>
+        Exam Record Marks Entry
+    </h1>
+    <div class="container">
+        <form>
+            <table class="container">               
+                        <tr>
+                            <th>Exam </th>
+                            <td>1st Term Exam 2016</td>
+                            <th>Department / Class</th>
+                            <td>CSE</td>
+                        </tr> 
+                        <tr>
+                            <th>Batch / Year </th>
+                            <td>1st </td>
+                            <th>Semester / Section</th>
+                            <td>2nd</td>
+                        </tr>
+            </table>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Roll Number</th>
+                        <th>Register Number</th>
+                        <th>Subject 1</th>
+                        <th></th>
+                        <th>Subject 2</th>
+                        <th></th>
+                        <th>Total Marks</th>
+                        <th>Marks Obtained</th>
+                        <th>CGPA</th>
+                        <th>Final Grade</th>
+                        <th>Final Result</th>
+                    </tr>
+                </thead>
+                <tbody id="marks-table-body">
+                    <tr>
+                        <td><input type="text" name="student-name[]" required></td>
+                        <td><input type="text" name="Roll-number[]" required></td>
+                        <td><input type="text" name="Register-number[]" required></td>
+                        <td><input type="text" name="subject1[]" required></td>
+                        <td>
+                            <select name="grade[]" required>
+                                <option value="A">A+</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                <option value="F">F</option>
+                            </select>
+                        </td>
+                        <td><input type="text" name="subject2[]" required></td>
+                        <td>
+                            <select name="grade[]" required>
+                                <option value="A">A+</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                <option value="F">F</option>
+                            </select>
+                        </td>
+                        <td><input type="number" name="Total-marks[]" required></td>
+                        <td><input type="number" name="Marks-obtained[]" required></td>
+                        <td><input type="number" name="CGPA[]" required></td>
+                        <td>
+                            <select name="grade[]" required>
+                                <option value="A">A+</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                <option value="F">F</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="Final-result[]" required>
+                                <option value="Passed">Passed</option>
+                                <option value="Failed">Failed</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="form-group">
+                <input type="button" value="Add Student" onclick="addStudentRow()">
+                <input type="submit" value="Update">
+            </div>
+        </form>
+    </div>
+
+    <script>
+    function addStudentRow() {
+      var tableBody = document.getElementById("marks-table-body");
+      var newRow = document.createElement("tr");
+      newRow.innerHTML = `
+                           <td><input type="text" name="student-name[]" required></td>
+                        <td><input type="text" name="Roll-number[]" required></td>
+                        <td><input type="text" name="Register-number[]" required></td>
+                        <td><input type="text" name="subject1[]" required></td>
+                        <td>
+                            <select name="grade[]" required>                               
+                                <option value="A">A+</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                <option value="F">F</option>
+                            </select>
+                        </td>
+                        <td><input type="text" name="subject2[]" required></td>
+                        <td>
+                            <select name="grade[]" required>                              
+                                <option value="A">A+</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                <option value="F">F</option>
+                            </select>
+                        </td>
+                        <td><input type="number" name="Total-marks[]" required></td>
+                        <td><input type="number" name="Marks-obtained[]" required></td>
+                        <td><input type="number" name="CGPA[]" required></td>
+                        <td>
+                            <select name="grade[]" required>                               
+                                <option value="A">A+</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                <option value="F">F</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="Final-result[]" required>
+                                <option value="Passed">Passed</option>
+                                <option value="Failed">Failed</option>
+                            </select>
+                        </td>
+      `;
+      tableBody.appendChild(newRow);
+    }
+    </script>
+</body>
+</html>
+

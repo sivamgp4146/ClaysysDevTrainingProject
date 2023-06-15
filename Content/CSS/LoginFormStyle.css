@@ -1,0 +1,69 @@
+﻿* {
+    box-sizing: border-box;
+}
+.main-body-style {
+    background-color: #1a9b6b;
+    font-family: "Source Sans Pro", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.main-container-style {
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: 100%;
+    width: 400px;
+    align-items: center;
+}
+.header-style {
+    background-color: #fff;
+    padding: 20px 40px;
+}
+    .header-style h2 {
+        margin: 0;
+        text-align: center;
+    }
+.form-style {
+    padding: 30px 40px;
+}
+    .form-style .formelement {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        position: relative;
+    }
+        .form-style .formelement label {
+            color: #1a9b6b;
+            display: inline-block;
+            margin-bottom: 5px;
+            margin-left: 5px;
+        }
+        .form-style .formelement input {
+            border: none;
+            border-bottom: 1.5px solid #8c8c8c;
+            display: block;
+            width: 100%;
+            border-radius: 4px;
+        }
+            .form-style .formelement input:focus {
+                outline: none;
+                border-color: #1a9b6b;
+            }
+    .form-style button {
+        background-color: #1a9b6b;
+        border: 1px solid #8c8c8c;
+        color: #fff;
+        display: block;
+        font-size: 20px;
+        width: 100%;
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+.main-container-style .link-style {
+    text-align: center;
+}

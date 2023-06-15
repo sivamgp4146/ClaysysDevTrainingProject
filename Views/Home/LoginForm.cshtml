@@ -1,0 +1,113 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login Form</title>
+    <style>
+        * {
+           
+            box-sizing: border-box;
+        }
+        .main-body-style {
+            background-color: #1a9b6b;
+            font-family: "Source Sans Pro", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .main-container-style {
+            background-color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+            max-width: 100%;
+            width: 400px;
+            align-items: center;
+        }
+        .header-style {           
+            background-color: #fff;
+            padding: 20px 40px;
+        }
+            .header-style h2 {
+                margin: 0;
+                text-align: center;
+            }
+        .form-style {
+            padding: 30px 40px;
+        }
+       .form-style .formelement {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            position: relative;
+        }
+        .form-style .formelement label {
+            color: #1a9b6b;
+            display: inline-block;
+            margin-bottom: 5px;
+            margin-left: 5px;
+        }
+        .form-style .formelement input {
+            border: none;
+            border-bottom: 1.5px solid #8c8c8c;
+            display: block;
+            width: 100%;
+            border-radius: 4px;
+        }
+            .form-style .formelement input:focus {
+                outline: none;
+                border-color: #1a9b6b;
+            }
+            .form-style button {
+                background-color: #1a9b6b;
+                border: 1px solid #8c8c8c;
+                color: #fff;
+                display: block;
+                font-size: 20px;
+                width: 100%;
+                margin-top: 20px;
+                padding: 10px;
+                border-radius: 4px;
+                cursor: pointer;
+                text-transform: uppercase;
+            }
+        .main-container-style .link-style {
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="main-body-style">
+    <div class="main-container-style">
+        <!--Form Heading-->
+        <div class="header-style">
+            <h2>USER LOGIN</h2>
+        </div>
+        <!--Form Elements-->
+        <form class="form-style" name="form1" id="form">
+            <!--Username-->
+            <div class="formelement">
+                <label>Username</label>
+                <input type="text" name="username" id="username" />               
+            </div>
+            <!--Password-->
+            <div class="formelement">
+                <label>Password</label>
+                <input type="password" name="password" id="password" />               
+            </div>
+            <!--Buttons-->
+            <div class="formelement">
+                <!--<input type="button" name="Login" id="button" onclick="Checkvalidation()" />-->
+                <button id="button">LOGIN</button>               
+            </div>
+            <div class="link-style">
+                <a href="#" style="text-decoration: none; cursor: pointer; color: black">Forgot Password?</a>
+            </div>
+        </form>
+    </div>    
+</body>
+</html>
